@@ -1,0 +1,2 @@
+# sea-command
+Battleship simulator
