@@ -11,8 +11,16 @@ template < std::size_t SHIP_SIZE >
 class Ship
 {
    public:
+    Ship()
+        : shipType_()
+        , hits_()
+        , position_()
+        , bearing_()
+    {
+    }
+
     ShipType                      shipType_;
-    std::array< SHIP_SIZE, bool > hits_;
+    std::array< bool, SHIP_SIZE > hits_;
     Point< unsigned int >         position_;
     Cardinal                      bearing_;
 };
