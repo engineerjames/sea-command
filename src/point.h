@@ -15,6 +15,12 @@ struct Point
     {
     }
 
+    Point()
+        : x( 0 )
+        , y( 0 )
+    {
+    }
+
     static double DistanceBetween( Point< T > p1, Point< T > p2 )
     {
         double deltaX   = std::pow( p2.x - p1.x, 2.0 );
