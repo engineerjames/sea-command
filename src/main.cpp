@@ -1,12 +1,11 @@
 #include <iostream>
+#include <memory>
 
-#include "cardinal.h"
-#include "point.h"
-#include "shiptype.h"
+#include "gamemanager.h"
 
 int main()
 {
-    std::cout << "Hello World!" << std::endl;
+    std::unique_ptr< GameManager > gm = std::make_unique< GameManager >();
 
     return 0;
 }
