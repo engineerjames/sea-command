@@ -1,16 +1,21 @@
-#include <array>
+#ifndef PLAYER_H
+#define PLAYER_H
 
+#include <memory>
+
+#include "placementstrategy.h"
 #include "ship.h"
-
-class PlacementStrategy;
-class ShotStrategy;
+#include "shotstrategy.h"
 
 class Player
 {
    public:
-    Player( const PlacementStrategy& placement, const ShotStrategy& shot );
+    Player();
 
     static const int N_SHIPS = 5;
+
+    void setShotStrategy( std::shared_ptr< ShotStrategy > strat );
+    void setPlacementStrategy( std::shared_ptr< PlacementStrategy > strat );
 
    private:
     Ship< 5 > carrier_;
@@ -19,6 +24,8 @@ class Player
     Ship< 3 > submarine_;
     Ship< 2 > patrolBoat_;
 
-    const PlacementStrategy& placementStrat_;
-    const ShotStrategy&      shotStrat_;
+    std::shared_ptr< PlacementStrategy > placementStrat_;
+    std::shared_ptr< ShotStrategy >      shotStrat_;
 };
+
+#endif
