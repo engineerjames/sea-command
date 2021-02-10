@@ -1,7 +1,10 @@
-cmake_minimum_required(VERSION 3.7)
+cmake_minimum_required( VERSION 3.7 )
 
 project( sea-command CXX )
 
-list(APPEND CXX_FLAGS -Wall -Wextra -Werror)
-
-add_subdirectory(src)
+if ( UNIX )
+    list( APPEND CXX_FLAGS -Wall -Wextra -Werror )
+elseif( WIN32 )
+    list( APPEND CXX_FLAGS /W4 /WX )
+endif( )
+add_subdirectory( src )
