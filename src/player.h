@@ -8,7 +8,7 @@
 class Player
 {
    public:
-       Player();
+    Player();
     // Player(const PlacementStrategy& placement, const ShotStrategy& shot);
 
     static const int N_SHIPS = 5;

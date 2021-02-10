@@ -8,7 +8,8 @@
 class PlacementStrategy
 {
    public:
-    virtual std::array< Point< int >, Player::N_SHIPS > Place() = 0;
+    typedef std::array< Point< int >, Player::N_SHIPS > PlacementArray;
+    virtual PlacementArray                              Place() = 0;
 };
 
 #endif

@@ -1,7 +1,6 @@
 #include "gamemanager.h"
 
 GameManager::GameManager()
-: players_()
+    : players_()
 {
-
 }
