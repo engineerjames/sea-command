@@ -2,14 +2,13 @@
 
 #include "ship.h"
 
-// class PlacementStrategy;
-// class ShotStrategy;
+class PlacementStrategy;
+class ShotStrategy;
 
 class Player
 {
    public:
-    Player();
-    // Player(const PlacementStrategy& placement, const ShotStrategy& shot);
+    Player( const PlacementStrategy& placement, const ShotStrategy& shot );
 
     static const int N_SHIPS = 5;
 
@@ -19,4 +18,7 @@ class Player
     Ship< 3 > destroyer_;
     Ship< 3 > submarine_;
     Ship< 2 > patrolBoat_;
+
+    const PlacementStrategy& placementStrat_;
+    const ShotStrategy&      shotStrat_;
 };
