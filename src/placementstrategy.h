@@ -3,13 +3,16 @@
 
 #include <array>
 
-#include "player.h"
+#include "point.h"
 
 class PlacementStrategy
 {
    public:
-    typedef std::array< Point< int >, Player::N_SHIPS > PlacementArray;
-    virtual PlacementArray                              Place() = 0;
+    typedef std::array< Point< int >, 5 > PlacementArray;
+    virtual PlacementArray                Place() = 0;
+    virtual ~PlacementStrategy()
+    {
+    }
 };
 
 #endif

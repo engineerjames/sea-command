@@ -7,6 +7,9 @@ class ShotStrategy
 {
    public:
     virtual Point< int > Fire() = 0;
+    virtual ~ShotStrategy()
+    {
+    }
 };
 
 #endif
